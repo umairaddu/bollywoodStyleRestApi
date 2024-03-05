@@ -4,9 +4,9 @@ import dotenv from 'dotenv'
 import userRouter from "./routers/userRegisterRouter.js"
 import dbConnect from "./db/connection.js"
 dotenv.config()
+import clouthRouter from "./routers/clouthRoute.js"
 
 import cors from 'cors'//backend connect to frantend
-import clouthRouter from "./routers/clouthRoute.js"
 // Use CORS middleware
 app.use(cors());
 
