@@ -11,6 +11,9 @@ import cors from 'cors'//backend connect to frantend
 app.use(cors());
 
 
+
+
+
 const port=process.env.PORT
 const dburl=process.env.DBURL
 const dbname=process.env.DBNAME  
