@@ -5,10 +5,12 @@ import userRouter from "./routers/userRegisterRouter.js"
 import dbConnect from "./db/connection.js"
 dotenv.config()
 import clouthRouter from "./routers/clouthRoute.js"
+import morgan from "morgan"
 
 import cors from 'cors'//backend connect to frantend
 // Use CORS middleware
 app.use(cors());
+app.use(morgan('dev'))
 
 
 
