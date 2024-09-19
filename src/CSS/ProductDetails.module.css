@@ -1,45 +1,24 @@
-
-
-
 .cardcontainer{
     display: flex;
-    margin-top: 5rem;
-    /* margin-left: 10rem; */
+    margin-top: 150px;
+    margin-left: 100px;
 }
 
-
-
-
 @media (max-width: 600px) {
-
     .cardcontainer{
-        flex-direction: column;
+        /* flex-direction: column; */
+    }
+    .cardcontainer img{
+    }    
+}
 
+@media (max-width: 1000px) {
+    .cardcontainer{
+        align-items: center;
     }
     .cardcontainer img{
         width: 200px;
-        height: 100%;
     }
-    
-
-
-}
-
-
-@media (max-width: 1000px) {
-
-    .cardcontainer{
-        align-items: center;
-
-    }
-    .cardcontainer img{
-
-        width: 250px;
-        height: 100%;
-    }
-    
-
-
 }
 
 

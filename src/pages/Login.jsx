@@ -6,6 +6,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom"
 import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
+import { baseUrl } from "./api";
 
 
 export const Login = () => {
@@ -17,7 +18,8 @@ export const Login = () => {
     const submit = async (formData) => {
         try {
             // Make API call with form data
-            const response = await axios.post('http://localhost:5000/user/login', formData);
+            // http://localhost:5000/
+            const response = await axios.post(`${baseUrl}/user/login`, formData);
             console.log(response.data);
             if (response.data.status === "success") {
                 toast.success("Login Successfully");

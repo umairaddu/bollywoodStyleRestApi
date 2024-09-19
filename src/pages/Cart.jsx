@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react"
 import { useParams } from "react-router-dom"
-
 import { useDispatch, useSelector } from "react-redux"
 import { Button, Card, CardBody } from "react-bootstrap"
 import { deleteCart } from "../Redux/Action/Index"
@@ -26,26 +25,11 @@ export const Cart = () => {
         setqty(qyt + 1)
         setprice(item.price * (qyt + 1));
 
-
-        // setprice(item.price += item.price)
-
     }
-
-    // const pricetotal = (item) => {
-    //     if (qyt === 1) {
-    //         setprice(item.price)
-
-    //     } else {
-    //         setprice(item += item)
-
-    //     }
-    // }
-
 
     const getvalue = (e) => {
         let x = e.target.value
         setprice(x * item.price);
-        // setqty(x)
     }
 
     const dispatch = useDispatch();
@@ -61,11 +45,8 @@ export const Cart = () => {
         }
     }
 
-
-    // console.log(item);
     return (
         <>
-
             <div style={{ backgroundColor: "lightgray", display: "flex", marginLeft: "20rem", width: "70%", justifyContent: "space-around", marginBottom: "50px" }}>
                 <div><h3>Bollywood Style </h3></div>
                 <div><h3> jelary</h3></div>
@@ -85,10 +66,7 @@ export const Cart = () => {
                                         <Button onClick={() => ondecrement(item)}>-</Button>{" "}
                                         <input onChange={getvalue} style={{ height: "20px", width: "50px" }} type="number" value={qyt} placeholder="" />{"   "}
                                         <Button onClick={() => onincremnet(item)}>+</Button>{" "}
-
                                     </div>
-
-
                                 </div>
 
                                 <div style={{ marginRight: "50%" }}>
@@ -98,8 +76,8 @@ export const Cart = () => {
                                     <h3>Total<br /><span>$ {price}</span></h3>
 
                                 </div>
-                                {/* 
-                                <div style={{ display: "" }}>
+                                
+                                {/* <div style={{ display: "" }}>
                                     <button  style={{ height: "30px", width: "100px" }} onClick={()=>Deleteitemcart(item)}>Remove</button>
 
                                 </div> */}

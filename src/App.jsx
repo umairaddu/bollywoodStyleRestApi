@@ -19,31 +19,23 @@ function App() {
   const currentRoute = location.pathname;
   return (
     <>
-
-
-      <div>
-        
+      <div>  
         <>
-          {currentRoute === "" || currentRoute === '/register' || currentRoute === '/login' ? null : <NavaBar />}
+          {currentRoute === "" || currentRoute === '/Ragister' || currentRoute === '/login' ? null : <NavaBar />}
         </>
         <Routes>
           <Route path='/' element={<Backgoundimg />}></Route>
           <Route path='/login' element={<Login />}></Route>
-          <Route path='Ragister' element={<Ragester />}></Route>
+          <Route path='/Ragister' element={<Ragester />}></Route>
           <Route path='/Cart' element={<Cart />}></Route>
           <Route path='/About' element={<About />}></Route>
           <Route path='/Contact' element={<Contact />}></Route>
           <Route path='/product' element={<Product />}></Route>
           <Route path='/Product-details/:id' element={<ProductsDetails />}></Route>
           {/* <Route path='Cart-details/:id' element={<Cartdetails/>}></Route>   */}
-
-
+          
         </Routes>
-
       </div>
-
-
-
     </>
   )
 }

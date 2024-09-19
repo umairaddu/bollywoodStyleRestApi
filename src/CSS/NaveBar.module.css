@@ -1,162 +1,175 @@
 /* Default styles for the navigation bar */
 .Nave {
-    border: 2px solid #000000;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px;
-    background-color: rgb(134, 31, 31);
-    color: #fff;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000; 
+  border: 2px solid #000000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: rgb(134, 31, 31);
+  color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
 }
 
 .Navecontant {
-    width: 100vh;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    
+  /* width: 100vh; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .Navecontant li {
-    margin-left: 30px;
-    list-style: none;
-  
+  list-style: none;
+
 }
+
 .Navecontant li a {
   text-decoration: none;
-}
+  color: white;
+  justify-content: space-between;
 
+}
 
 .button {
-    border-radius: 5px;
-    width: 6rem;
-    list-style: none;
-    
-    
+  border-radius: 5px;
+  margin: 10px;
+  width: 150px;
+  list-style: none;
 }
 
 img {
-    height: 20px;
+  /* height: 20px; */
 }
 
 img {
-    background-image: url(hd_bg.jpj);
+  background-image: url(hd_bg.jpj);
 }
 
 /* Media query for screens smaller than a certain width (e.g., 768px for tablets) */
 @media only screen and (max-width: 768px) {
-    .Navecontant {
-        display: none; /* Hide the navigation links */
-    }
+  .Navecontant {
+    display: none;
+    /* Hide the navigation links */
+  }
 
-    .button {
-        display: block; /* Display the hamburger menu button */
-    }
+  .button {
+    display: block;
+    /* Display the hamburger menu button */
+  }
 }
 
 /* Your existing styles here */
 
 /* Hamburger icon styles */
 .hamburger {
-    display: none; /* Initially hide the hamburger icon on larger screens */
-    cursor: pointer;
+  display: none;
+  /* Initially hide the hamburger icon on larger screens */
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 6px 0;
+}
+
+/* Adjust the styles of the navigation links for smaller screens */
+@media only screen and (max-width: 768px) {
+  .Navecontant ul {
+    display: none;
+    /* Hide the navigation links by default on smaller screens */
   }
-  
-  .bar {
-    width: 25px;
-    height: 3px;
-    background-color: #fff;
-    margin: 6px 0;
-  }
-  
-  /* Adjust the styles of the navigation links for smaller screens */
-  @media only screen and (max-width: 768px) {
-    .Navecontant ul {
-      display: none; /* Hide the navigation links by default on smaller screens */
-    }
-  
-    .hamburger {
-      display: block; /* Display the hamburger icon on smaller screens */
-    }
-  
-    .Navecontant ul.show {
-      display: flex;
-      flex-direction: column;
-      position: absolute;
-      top: 60px; /* Adjust the top position as needed */
-      left: 0;
-      background-color: rgb(134, 31, 31);
-      width: 100%;
-      padding: 10px;
-      z-index: 1;
-    }
-  
-    .Navecontant li {
-      margin-left: 0;
-      margin-bottom: 10px;
-    }
-  
-    .Navecontant li a {
-      color: #fff;
-    }
-  }
-  
 
   .hamburger {
-    display: none; /* Initially hide the hamburger icon on larger screens */
-    cursor: pointer;
+    display: block;
+    /* Display the hamburger icon on smaller screens */
   }
-  
-  .bar {
-    width: 25px;
-    height: 3px;
-    background-color: #fff;
-    margin: 6px 0;
+
+  .Navecontant ul.show {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    /* Adjust the top position as needed */
+    left: 0;
+    background-color: rgb(134, 31, 31);
+    width: 100%;
+    padding: 10px;
+    z-index: 1;
   }
-  
-  /* Adjust the styles of the navigation links for smaller screens */
-  @media only screen and (max-width: 768px) {
-    .Navecontain{
-        display: flex;
-    }
-    .Navecontant {
-      display: none; /* Hide the navigation links by default on smaller screens */
-    }
-  
-    .hamburger {
-      display: block; /* Display the hamburger icon on smaller screens */
-    }
-  
-    .Navecontant.show {
-      display: flex;
-      flex-direction: column;
-      position: absolute;
-      top: 80px; /* Adjust the top position as needed */
-      left: 0;
-      background-color: rgb(134, 31, 31);
-      width: 50vw;
-      height: 85vh;
-      padding: 10px;
-      z-index: 1;
-      /* border: 2px solid black; */
-      /* display: block; */
-    }
-  .Navecontain{
+
+  .Navecontant li {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+
+  .Navecontant li a {
+    color: #fff;
+  }
+}
+
+
+.hamburger {
+  display: none;
+  /* Initially hide the hamburger icon on larger screens */
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 6px 0;
+}
+
+/* Adjust the styles of the navigation links for smaller screens */
+@media only screen and (max-width: 768px) {
+  .Navecontain {
+    display: flex;
+  }
+
+  .Navecontant {
+    display: none;
+    /* Hide the navigation links by default on smaller screens */
+  }
+
+  .hamburger {
+    display: block;
+    /* Display the hamburger icon on smaller screens */
+  }
+
+  .Navecontant.show {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    /* Adjust the top position as needed */
+    left: 0;
+    background-color: rgb(134, 31, 31);
+    width: 50vw;
+    height: 85vh;
+    padding: 10px;
+    z-index: 1;
+    /* border: 2px solid black; */
+    /* display: block; */
+  }
+
+  .Navecontain {
     display: block;
     /* width: ; */
   }
-    .Navecontant.show li {
-      margin-left: 0;
-      margin-bottom: 10px;
-      
-    }
-  
-    .Navecontant.show li a {
-      /* color: #ec1919; */
-    }
+
+  .Navecontant.show li {
+    margin-left: 0;
+    margin-bottom: 10px;
+
   }
+
+  .Navecontant.show li a {
+    /* color: #ec1919; */
+  }
+}

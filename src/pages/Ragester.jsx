@@ -32,7 +32,7 @@ export const Ragester = () => {
     const submit = async (formData) => {
         try {
             // Make API call with form data
-            const response = await axios.post(`${baseUrl}user/registration`, formData);
+            const response = await axios.post(`${baseUrl}/user/registration`, formData);
             console.log(response.data.token);
             temp = response;
             if (response.data.status === "success") {
